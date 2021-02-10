@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 

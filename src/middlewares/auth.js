@@ -7,8 +7,6 @@ const extractToken = (ctx) => {
 
 const handleError = (error) => {
   console.error('Failed to verify token', error);
-  // illustration purposes only
-  // for production-ready code, use error codes/types and a catalog (maps codes -> responses)
 
   /* eslint-disable prefer-promise-reject-errors */
   return Promise.reject({

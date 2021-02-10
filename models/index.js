@@ -6,19 +6,11 @@ const Sequelize = require('sequelize');
 
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-// eslint-disable-next-line no-path-concat
+
 const config = require(`${__dirname}/../config/config.json`)[env];
 const db = {};
 
 const sequelize = new Sequelize(config.url, config);
-// let sequelize;
-// if (config.use_env_variable) {
-//   console.log('aqui');
-//   sequelize = new Sequelize(process.env[config.use_env_variable], config);
-// } else {
-//   console.log(config.username);
-//   sequelize = new Sequelize(config.database, config.username, config.password, config);
-// }
 
 fs
   .readdirSync(__dirname)
