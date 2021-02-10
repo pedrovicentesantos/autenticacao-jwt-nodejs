@@ -1,11 +1,19 @@
 /* eslint-disable no-unused-vars */
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
-const sign = (payload) => jwt.sign(payload, 'stringsegredo');
+const signOptions = {
+  algorithm: 'RS256',
+};
+
+const jwtPublicKey = process.env.JWT_PUBLIC_KEY;
+const jwtPrivateKey = process.env.JWT_PRIVATE_KEY;
+
+const sign = (payload) => jwt.sign(payload, jwtPrivateKey, signOptions);
 
 const verify = (token) => new Promise((resolve, reject) => jwt.verify(
   token,
-  'stringsegredo',
+  jwtPublicKey,
   (error, data) => {
     error ? reject(error) : resolve(data);
   },
