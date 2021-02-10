@@ -4,6 +4,7 @@ require('dotenv').config();
 
 const signOptions = {
   algorithm: 'RS256',
+  expiresIn: '15m',
 };
 
 const jwtPublicKey = process.env.JWT_PUBLIC_KEY;
