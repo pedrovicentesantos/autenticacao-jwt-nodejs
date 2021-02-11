@@ -1,6 +1,6 @@
 # Aplicação
 
-A aplicação consiste de uma API feita em Node.js que realiza a auntenticação de usuários utilizando [JSON Web Token - JWT](https://jwt.io).
+A aplicação consiste de uma API feita em Node.js que realiza a autenticação de usuários utilizando [JSON Web Token - JWT](https://jwt.io).
 
 Os dados dos usuários ficam salvos em um Banco de Dados PostgreSQL e é utilizado ORM [Sequelize](https://sequelize.org) para lidar com o Banco e tratar das migrations.
 
@@ -35,7 +35,7 @@ Depois desses passos, pode-se rodar a aplicação usando o comando `npm start`.
 Visando melhorar o uso e segurança na utilização do JWT, são aplicadas as seguintes práticas:
 
 - Remoção de informações sensíveis do payload do JWT;
-- Alterar o algoritmo de validação para assimétrico, com uso de chaves pública e privada;
+- Alteração do algoritmo de validação para assimétrico, com uso de chaves pública e privada;
 - Definição de tempo de expiração do token.
 
 Dessa forma, o uso do JWT para autenticação passa a ser mais seguro e evita alguns problemas comuns.
